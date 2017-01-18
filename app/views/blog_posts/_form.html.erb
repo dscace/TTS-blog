@@ -12,14 +12,12 @@
   <% end %>
 
   <div class="form-group">
+    <%= f.label :title, class:"sr-only" %>
     <%= f.text_field :title, class: "form-control", placeholder: "Post Title" %>
   </div>
 
   <div class="form-group">
-    <%= f.text_field :author, class: "form-control", placeholder: "Author Name" %>
-  </div>
-
-  <div class="form-group">
+    <%= f.label :blog_entry, class:"sr-only" %>
     <%= f.text_area :blog_entry, class: "form-control", :rows => 20, placeholder: "Speak Your Mind!" %>
   </div>
 
