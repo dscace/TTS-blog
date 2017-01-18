@@ -1,5 +1,5 @@
-<%= form_for(comment) do |f| %>
-  <% if comment.errors.any? %>
+<%= form_for(@comment) do |f| %>
+  <% if @comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :author %>
+    <%= f.label :author %><br />
     <%= f.text_field :author %>
   </div>
 
   <div class="field">
-    <%= f.label :comment_entry %>
+    <%= f.label :comment_entry %><br />
     <%= f.text_area :comment_entry %>
   </div>
 
