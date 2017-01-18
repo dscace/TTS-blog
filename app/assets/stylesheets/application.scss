@@ -19,10 +19,27 @@
 
 body {
 	background-image: url(fabric.png);
+	font-family: 'VT323', monospace;
+	font-size: 20px;
 }
 
 .container {
 	background-color: rgba(255,255,255,0.5);
 	margin-top: 50px;
 	border-radius: 25px;
+}
+
+p {
+		font-family: 'VT323', monospace;
+		font-size: 20px;
+}
+
+h1 {
+	font-family: 'Rock Salt', cursive;
+}
+
+.panel-heading {
+	background-color: #7D1935 !important;
+	font-family: 'Rock Salt', cursive;
+	color: gray;
 }

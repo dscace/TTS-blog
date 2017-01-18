@@ -1,17 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<div class="panel panel-primary">
+<div class="panel">
 	<div class="panel-heading">
 	  <%= @blog_post.title %>
 	</div>
 
 	<div class="panel-body">
-		<p>by <%= @blog_post.author %></p>
+		<p>by <strong><%= @blog_post.author %></strong></p>
 		<p><%= @blog_post.blog_entry %></p>
+		<span class="posted-at">posted on: <%= @blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p')%></span>
 	</div>
 </div>
 
-<div class="panel panel-success">
+<div class="panel">
 	<div class="panel-heading">
 		Make a Comment
 	</div>
@@ -20,15 +21,16 @@
 	</div>
 </div>
 
-<div class="panel panel-default">
-	<div class="panel-header">
-		<h4>Comments</h4>
+<div class="panel">
+	<div class="panel-heading">
+		Comments
 	</div>
 	<% @blog_post.comments.each do |comment| %>
-	<div class="panel-body">
-		<p><strong><%= comment.author %></strong> said: </p>
-		<p><%= comment.comment_entry %></p>
-	</div>
+		<div class="panel-body">
+			<p><strong><%= comment.author %></strong> said: </p>
+			<p><%= comment.comment_entry %></p>
+	    <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %>
+	  </div>
 	<% end %>
 </div>
 

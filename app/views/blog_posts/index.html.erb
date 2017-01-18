@@ -5,7 +5,7 @@
   <div class="row">
     <% @blog_posts.each do |blog_post| %>
       <div class="col-md-6">
-        <div class="panel panel-default">
+        <div class="panel">
           <div class="panel-heading">
             <%= link_to blog_post.title, blog_post %>
           </div>
@@ -14,8 +14,9 @@
             <p><%= blog_post.blog_entry[0..150] %>... [<%= link_to 'Continue', blog_post %>]</p>
           </div>
           <div class="panel-footer">
-            <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
-            <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-xs btn-info" %>
+            <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %>
+            <span class="posted-at pull-right">posted on: <%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p')%></span>
           </div>
         </div>
       </div>
