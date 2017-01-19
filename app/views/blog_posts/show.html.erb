@@ -6,7 +6,7 @@
 	</div>
 
 	<div class="panel-body">
-		<p>by <strong><%= @blog_post.user.email %></strong></p>
+  	<p>by <strong><%= @blog_post.user.username %></strong><br />
 		<p><%= @blog_post.blog_entry %></p>
 		<span class="posted-at">posted on: <%= @blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p')%></span>
 	</div>
@@ -27,7 +27,7 @@
 	</div>
 	<% @blog_post.comments.each do |comment| %>
 		<div class="panel-body">
-			<p><strong><%= comment.user.email %></strong> said: </p>
+      <p><strong><%= comment.user.username %></strong> said:</p>
 			<p><%= comment.comment_entry %></p>
 	    <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %>
 	  </div>
