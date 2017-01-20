@@ -16,11 +16,16 @@
             <p><%= blog_post.blog_entry[0..150] %>... [<%= link_to 'Continue', blog_post %>]</p>
           </div>
           <div class="panel-footer">
+            <% if user_signed_in? %>
+
+            <% if current_user.id == blog_post.user.id %>
             <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-xs btn-info" %>
             <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %>
             <span class="posted-at pull-right">posted on: <%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p')%></span>
+            <% end %>
+            <% end %>
           </div>
-        </div>
+         </div>
       </div>
     <% end %>
   </div>
