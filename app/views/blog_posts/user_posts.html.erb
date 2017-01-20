@@ -1,0 +1,19 @@
+<h1><%= @user.username %>'s Page</h1>
+
+<div>
+  <% @user.blog_posts.each do |blog_post| %>
+    <div class="col-md-12">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <%= link_to blog_post.title, blog_post %>
+        </div>
+        <div class="panel-body">
+          <p><span class="posted-at"><%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p')%></span></p>
+          <p><%= blog_post.blog_entry[0..150] %>... [<%= link_to 'Continue', blog_post %>]</p>
+        </div>
+        <div class="panel-footer">
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

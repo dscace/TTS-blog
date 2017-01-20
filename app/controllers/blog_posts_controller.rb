@@ -2,6 +2,15 @@ class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
 
   def your_posts
+    # don't need anything in here
+    # we'll use association via current user
+  end
+
+  def user_posts
+    @user = User.find(params[:id])
+    # in the link to this page we'll pass
+    # the user's ID #, then use association
+    # to bring up their blog posts
   end
 
   # GET /blog_posts
