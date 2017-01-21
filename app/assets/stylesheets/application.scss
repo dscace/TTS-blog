@@ -62,10 +62,10 @@ ul {
 .jumbotron {
 	background: url("https://s3.amazonaws.com/bloggrounds/laptop.jpg") no-repeat center;
 	text-align: center;
-	color: transparent;
+	color: rbga(255,255,255,0);
 	height: 250px;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
+/*	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+*/}
 
 a:hover {
 	background-color: transparent;
