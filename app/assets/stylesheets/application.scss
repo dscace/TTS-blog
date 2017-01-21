@@ -62,7 +62,7 @@ ul {
 .jumbotron {
 	background: url("https://s3.amazonaws.com/bloggrounds/laptop.jpg") no-repeat center;
 	text-align: center;
-	color: rbga(255,255,255,0);
+	color: rbga(255,255,255,0) !important;
 	height: 250px;
 /*	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 */}
