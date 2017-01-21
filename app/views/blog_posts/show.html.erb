@@ -29,8 +29,7 @@
 		<div class="panel-body">
       <p><strong><%= link_to comment.user.username, user_posts_path(id: comment.user_id) %></strong> said:</p>
 			<p><%= comment.comment_entry %></p>
-			<% if current_user.id == @blog_post.user.id %>
-        <%= link_to 'Edit', edit_blog_post_path(@blog_post), class: "btn btn-xs btn-info" %>
+			<% if current_user.id == @blog_post.user.id || current_user.id == comment.user_id %>
         <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %>
       <% end %>
 	  </div>

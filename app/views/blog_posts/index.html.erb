@@ -10,22 +10,19 @@
         <div class="panel">
           <div class="panel-heading">
             <%= link_to blog_post.title, blog_post %>
+            <% if user_signed_in? %>
+              <% if current_user.id == blog_post.user.id %>
+                <p class="pull-right"><%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-xs btn-default" %>
+                <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-default" %></p>
+              <% end %>
+            <% end %>
           </div>
           <div class="panel-body">
             by <strong><%= link_to blog_post.user.username, user_posts_path(id: blog_post.user_id) %></strong><br />
             <p><%= blog_post.blog_entry[0..150] %>... [<%= link_to 'Continue', blog_post %>]</p>
+            <span class="posted-at">posted on: <%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p')%></span>
           </div>
-          <div class="panel-footer">
-            <% if user_signed_in? %>
-
-            <% if current_user.id == blog_post.user.id %>
-            <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-xs btn-info" %>
-            <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %>
-            <span class="posted-at pull-right">posted on: <%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p')%></span>
-            <% end %>
-            <% end %>
-          </div>
-         </div>
+        </div>
       </div>
     <% end %>
   </div>
