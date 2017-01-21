@@ -18,7 +18,7 @@
 @import "bootstrap";
 
 body {
-	background: url(fabric.png) fixed;
+	background: url("https://s3.amazonaws.com/bloggrounds/fabric.png") fixed;
 	font-family: 'VT323', monospace;
 	font-size: 20px;
 }
@@ -60,7 +60,7 @@ ul {
 }
 
 .jumbotron {
-	background: url(laptop.jpg) no-repeat center;
+	background: url("https://s3.amazonaws.com/bloggrounds/laptop.jpg") no-repeat center;
 	text-align: center;
 	color: white;
 	height: 250px;
