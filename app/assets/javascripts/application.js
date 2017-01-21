@@ -12,6 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require data-confirm-modal
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+dataConfirmModal.setDefaults({
+  title: 'Destroy',
+  commit: 'I\'m sure',
+  cancel: 'Cancel'
+});
