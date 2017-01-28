@@ -1,24 +1,9 @@
-# README
+This is a basic Multiple User Blog App.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<a target="_blank" href="https://dry-gorge-57674.herokuapp.com/">You can view the app on Heroku, here.</a>
 
-Things you may want to cover:
+If you're signed in, you can delete any comment you left or any comment left on your post by others.
 
-* Ruby version
+If you would like to test the app yourself, log in as User: test Email: test@test.com Password: testtest
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
